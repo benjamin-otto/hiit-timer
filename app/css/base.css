@@ -1,0 +1,58 @@
+html, body, #app {
+  box-sizing: border-box;  
+  font-family: 'helvetica neue';
+  font-size: 16px;
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.container {
+  min-height: 100%;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.nav {
+  padding: 20px;
+}
+
+.nav li {
+  margin-right: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+

@@ -1,10 +1,20 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import './css/base.css'
+import './css/light.css'
+import './css/dark.css'
+
+import Nav from './components/Nav'
 
 function App() {
   return (
-    <h1>Hello World</h1>
+    <Router>
+      <div className='container light'>
+        <Nav />
+
+      </div>
+    </Router>
   )
 }
 
