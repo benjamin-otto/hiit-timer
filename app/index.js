@@ -5,16 +5,23 @@ import './css/base.css'
 import './css/light.css'
 import './css/dark.css'
 
+import { ThemeProvider } from './contexts/theme'
 import Nav from './components/Nav'
 
 function App() {
+  const [theme, setTheme] = React.useState('light')
+  const toggleTheme = () => { setTheme((theme) => theme === 'light' ? 'dark' : 'light') }
+
   return (
     <Router>
-      <div className='container light'>
-        <Nav />
-
-      </div>
-    </Router>
+      <ThemeProvider value={theme}>
+        <div className={`container ${theme}`}>
+          <div className='inner-box'>
+            <Nav toggleTheme={toggleTheme} />
+          </div>
+        </div>
+      </ThemeProvider>
+    </Router >
   )
 }
 

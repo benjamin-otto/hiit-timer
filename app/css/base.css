@@ -29,8 +29,23 @@ li {
   list-style-type: none;
 }
 
+hr {
+  border: 0; 
+  border-color: inherit;
+  border-top: 1px solid;
+  display: block; 
+  height: 1px;
+  margin: 1em 0; padding: 0; 
+}
+
 .container {
   min-height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.inner-box {
+  width: 800px;
 }
 
 .flex-row {
@@ -46,13 +61,18 @@ li {
   flex-wrap: wrap;
 }
 
+.header {
+  font-family: 'Righteous', cursive;
+  font-size: 4.5rem;
+  margin-top: 30px;
+}
+
 .nav {
   padding: 20px;
 }
 
 .nav li {
-  margin-right: 20px;
+  margin-right: 30px;
   font-size: 1rem;
   font-weight: bold;
 }
-
