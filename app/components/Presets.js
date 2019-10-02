@@ -10,7 +10,7 @@ function PresetCard({ title, warmup, low, high, cooldown, rounds }) {
         Warmup: {warmup}
       </div>
       <div className=''>
-        Low/High: {`${low}/${high}`}
+        High/Low: {`${high}/${low}`}
       </div>
       <div className=''>
         Cooldown: {cooldown}
@@ -27,6 +27,8 @@ export default function Presets() {
   return (
     <div className='flex-row flex-wrap space-evenly'>
       <PresetCard title={'Fat Burner'} warmup={45} low={30} high={60} cooldown={45} rounds={10} />
+      <PresetCard title={'Tabata'} warmup={45} low={30} high={60} cooldown={45} rounds={10} />
+      <PresetCard title={'Boxing Rounds'} warmup={45} low={30} high={60} cooldown={45} rounds={10} />
     </div>
   )
 }
