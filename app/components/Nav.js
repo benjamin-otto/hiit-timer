@@ -8,8 +8,10 @@ export default function ({ toggleTheme }) {
 
   return (
     <div>
-      <div className='flex-row flex-center header'>
-        Interval Timer
+      <div className='flex-row flex-center'>
+        <div className='header'>
+          Interval Timer
+        </div>
       </div>
 
       <nav>
