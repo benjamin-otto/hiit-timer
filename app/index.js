@@ -7,6 +7,7 @@ import './css/dark.css'
 
 import { ThemeProvider } from './contexts/theme'
 import Nav from './components/Nav'
+import Presets from './components/Presets'
 
 function App() {
   const [theme, setTheme] = React.useState('light')
@@ -18,6 +19,11 @@ function App() {
         <div className={`container ${theme}`}>
           <div className='inner-box'>
             <Nav toggleTheme={toggleTheme} />
+
+            <Switch>
+              <Route path='/' exact component={Presets} />
+              <Route render={() => <h1>404</h1>} />
+            </Switch>
           </div>
         </div>
       </ThemeProvider>
