@@ -28,8 +28,8 @@ export default function ({ toggleTheme }) {
           </li>
           <li>
             {theme === 'light'
-              ? <FontAwesome name='moon' onClick={() => toggleTheme('dark')} />
-              : <FontAwesome name='sun' onClick={() => toggleTheme('light')} />
+              ? <FontAwesome name='moon' className='theme-icon' onClick={() => toggleTheme('dark')} />
+              : <FontAwesome name='sun' className='theme-icon' onClick={() => toggleTheme('light')} />
             }
           </li>
         </ul>

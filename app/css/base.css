@@ -91,6 +91,10 @@ hr {
   font-weight: bold;
 }
 
+.theme-icon:hover {
+  cursor: pointer;
+}
+
 .preset-card {
   border: 1px solid; 
   border-color: inherit;
