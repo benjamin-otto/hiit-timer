@@ -4,3 +4,14 @@
   color: #F39B6D;
 }
 
+.slider-dark {
+  background-color: #D3D3D3;
+}
+
+.slider-dark::-webkit-slider-thumb {
+  background-color: #F39B6D;
+}
+
+.slider-dark::-moz-range-thumb {
+  background-color: #F39B6D;
+}

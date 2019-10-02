@@ -8,6 +8,7 @@ import './css/dark.css'
 import { ThemeProvider } from './contexts/theme'
 import Nav from './components/Nav'
 import Presets from './components/Presets'
+import Custom from './components/Custom'
 
 function App() {
   const [theme, setTheme] = React.useState('light')
@@ -22,6 +23,7 @@ function App() {
 
             <Switch>
               <Route path='/' exact component={Presets} />
+              <Route path='/custom' component={Custom} />
               <Route render={() => <h1>404</h1>} />
             </Switch>
           </div>

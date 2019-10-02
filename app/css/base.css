@@ -39,9 +39,10 @@ hr {
 }
 
 .container {
-  min-height: 100%;
   display: flex;
+  height: 100%;
   justify-content: center;
+  padding: 10px;
 }
 
 .inner-box {
@@ -77,6 +78,7 @@ hr {
   font-family: 'Righteous', cursive;
   font-size: 4.5rem;
   margin-top: 30px;
+  text-align: center;
 }
 
 .nav {
@@ -100,4 +102,64 @@ hr {
   margin-bottom: 15px;
   min-width: 175px;
   min-height: 175px;
+}
+
+.custom-container {
+  margin-top: 30px;
+}
+
+.slider-container {
+  margin-bottom: 35px;  
+  min-width: 50%;
+  opacity: 0.7;
+  transition: all 0.4s;
+  -webkit-transition: .4s;
+}
+
+.slider-container:hover,
+.slider-container:focus,
+.slider-container:active  {
+  opacity: 1;
+  font-weight: bold;
+}
+
+.slider-value {
+  min-width: 55px;
+  text-align: center;
+}
+
+.slider { 
+  border-radius: 10px;
+  height: 15px;
+  outline: none;
+  -webkit-appearance: none;
+  width: 100%;
+}
+
+.slider::-webkit-slider-thumb {  
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.slider::-moz-range-thumb {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  height: 45px;
+  width: 45px;
+}
+
+.slider::-moz-range-thumb:hover {
+  height: 45px;
+  width: 45px;
 }
