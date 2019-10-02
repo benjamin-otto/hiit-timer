@@ -102,6 +102,16 @@ hr {
   margin-bottom: 15px;
   min-width: 175px;
   min-height: 175px;
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+
+.preset-card:hover,
+.preset-card:focus,
+.preset-card:active {
+  background-color: #F1F1F1;
+  cursor: pointer;
+  opacity: 1;
 }
 
 .custom-container {
