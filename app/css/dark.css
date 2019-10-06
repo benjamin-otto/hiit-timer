@@ -1,17 +1,34 @@
+:root {
+  --dark-bkg: #404E4D;
+  --dark-color: #DFBBB1;
+  --dark-input-bkg: #D3D3D3;
+}
+
 .dark {
-  background-color: #404E4D;
-  border-color: #F39B6D;
-  color: #F39B6D;
+  background-color: var(--dark-bkg);
+  border-color: var(--dark-color);
+  color: var(--dark-color);
+}
+
+.preset-card .title-dark {
+  background-color: var(--dark-color);
+  border: 1px solid var(--dark-color);
+  color: var(--dark-bkg);
 }
 
 .slider-dark {
-  background-color: #D3D3D3;
+  background-color: var(--dark-input-bkg);
 }
 
 .slider-dark::-webkit-slider-thumb {
-  background-color: #F39B6D;
+  background-color: var(--dark-color);
 }
 
 .slider-dark::-moz-range-thumb {
-  background-color: #F39B6D;
+  background-color: var(--dark-color);
+}
+
+.btn-dark {
+  border: 1px solid var(--dark-color);
+  background-color: var(--dark-color);
 }

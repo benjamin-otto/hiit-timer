@@ -1,17 +1,34 @@
+:root {
+  --light-bkg: #FCFCFC;
+  --light-color: #81717A;
+  --light-input-bkg: #D3D3D3;
+}
+
 .light {
-  background-color:#FCFCFC;
-  border-color: #6C6EA0;
-  color: #6C6EA0;
+  background-color: var(--light-bkg);
+  border-color: var(--light-color);
+  color: var(--light-color);
+}
+
+.preset-card .title-light {
+  background-color: var(--light-color);
+  border: 1px solid var(--light-color);
+  color: var(--light-bkg);
 }
 
 .slider-light {
-  background-color: #D3D3D3;
+  background-color: var(--light-input-bkg);
 }
 
 .slider-light::-webkit-slider-thumb {
-  background-color: #6C6EA0;
+  background-color: var(--light-color);
 }
 
 .slider-light::-moz-range-thumb {
-  background-color: #6C6EA0;
+  background-color: var(--light-color);
+}
+
+.btn-light {
+  border: 1px solid var(--light-color);
+  background-color: var(--light-color);
 }

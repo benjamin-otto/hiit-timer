@@ -1,0 +1,48 @@
+:root {
+  --warmup-color: #F39B6D;
+  --low-color: #E0CA3C;
+  --high-color: #91C499;
+  --cooldown-color: #8EA8C3;
+}
+
+.timer-text {
+  font-weight: bold;
+  text-align: center;
+}
+
+.timer-WARMUP {
+  color: var(--warmup-color);
+}
+
+.timer-LOW {
+  color: var(--low-color);
+}
+
+.timer-HIGH {
+  color: var(--high-color);
+}
+
+.timer-COOLDOWN {
+  color: var(--cooldown-color);
+}
+
+.time-remaining {
+  font-family: 'Righteous', cursive;
+  font-size: 4rem;
+}
+
+.timer-WARMUP .CircularProgressbar-path {
+  stroke: var(--warmup-color) !important;
+}
+
+.timer-LOW .CircularProgressbar-path {
+  stroke: var(--low-color) !important;
+}
+
+.timer-HIGH .CircularProgressbar-path {
+  stroke: var(--high-color) !important;
+}
+
+.timer-COOLDOWN .CircularProgressbar-path {
+  stroke: var(--cooldown-color) !important;
+}
