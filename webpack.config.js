@@ -21,7 +21,8 @@ module.exports = {
       template: 'app/index.html'
     }),
     new CopyWebpackPlugin([
-      { from: './app/sounds', to: 'sounds/' }
+      { from: './app/sounds', to: 'sounds/' },
+      { from: '_redirects' }
     ])
   ],
   devServer: {
