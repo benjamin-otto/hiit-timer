@@ -1,34 +1,45 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import presets from '../data/presets'
+import ThemeContext from '../contexts/theme'
+import queryString from 'query-string'
 
 
+function PresetCard(props) {
+  const { title, warmup, low, high, cooldown, rounds } = props
+  const theme = React.useContext(ThemeContext)
+  const search = queryString.stringify(props)
 
-function PresetCard({ title, warmup, low, high, cooldown, rounds }) {
   return (
-    <div className='preset-card'>
-      <h3>{title}</h3>
-      <div className=''>
-        Warmup: {warmup}
+    <Link to={{ pathname: '/timer', search: `?${search}` }}>
+      <div className='preset-card'>
+        <div className={`title title-${theme}`}>{title}</div>
+        <div>Warmup: {warmup}</div>
+        <div>High/Low: {`${high}/${low}`}</div>
+        <div>Cooldown: {cooldown}</div>
+        <div>{rounds} rounds</div>
       </div>
-      <div className=''>
-        High/Low: {`${high}/${low}`}
-      </div>
-      <div className=''>
-        Cooldown: {cooldown}
-      </div>
-      <div className=''>
-        {rounds} rounds
-      </div>
-    </div>
+    </Link>
   )
 }
 
-
 export default function Presets() {
   return (
-    <div className='flex-row flex-wrap space-evenly'>
-      <PresetCard title={'Fat Burner'} warmup={45} low={30} high={60} cooldown={45} rounds={10} />
-      <PresetCard title={'Tabata'} warmup={45} low={30} high={60} cooldown={45} rounds={10} />
-      <PresetCard title={'Boxing Rounds'} warmup={45} low={30} high={60} cooldown={45} rounds={10} />
+    <div>
+      <div className='flex-row flex-wrap space-evenly'>
+        {presets.map((preset, index) => {
+          const { title, warmup, low, high, cooldown, rounds } = preset
+
+          return <PresetCard
+            key={index}
+            title={title}
+            warmup={warmup}
+            low={low}
+            high={high}
+            cooldown={cooldown}
+            rounds={rounds} />
+        })}
+      </div>
     </div>
   )
 }
