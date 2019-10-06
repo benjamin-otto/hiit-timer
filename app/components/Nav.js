@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 import FontAwesome from 'react-fontawesome'
 import ThemeContext from '../contexts/theme'
 
-export default function ({ toggleTheme }) {
+export default function ({ toggleTheme, playAudio, togglePlayAudio }) {
   const theme = React.useContext(ThemeContext)
 
   return (
@@ -15,7 +15,12 @@ export default function ({ toggleTheme }) {
       </div>
 
       <nav>
-        <ul className='flex-row flex-center flex-wrap nav'>
+        <ul className='flex-row space-evenly nav'>
+          <li>
+            {theme === 'light'
+              ? <FontAwesome name='moon' className='icon' onClick={() => toggleTheme()} />
+              : <FontAwesome name='sun' className='icon' onClick={() => toggleTheme()} />}
+          </li>
           <li>
             <NavLink to='/' exact>
               Presets
@@ -27,9 +32,9 @@ export default function ({ toggleTheme }) {
             </NavLink>
           </li>
           <li>
-            {theme === 'light'
-              ? <FontAwesome name='moon' className='theme-icon' onClick={() => toggleTheme('dark')} />
-              : <FontAwesome name='sun' className='theme-icon' onClick={() => toggleTheme('light')} />
+            {playAudio === true
+              ? <FontAwesome name='volume-up' className='icon' onClick={() => togglePlayAudio()} />
+              : <FontAwesome name='volume-off' className='icon' onClick={() => togglePlayAudio()} />
             }
           </li>
         </ul>
