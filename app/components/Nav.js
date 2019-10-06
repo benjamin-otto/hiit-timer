@@ -3,6 +3,10 @@ import { NavLink } from 'react-router-dom'
 import FontAwesome from 'react-fontawesome'
 import ThemeContext from '../contexts/theme'
 
+const activeStyle = {
+  textDecoration: 'underline'
+}
+
 export default function ({ toggleTheme, playAudio, togglePlayAudio }) {
   const theme = React.useContext(ThemeContext)
 
@@ -22,12 +26,12 @@ export default function ({ toggleTheme, playAudio, togglePlayAudio }) {
               : <FontAwesome name='sun' className='icon' onClick={() => toggleTheme()} />}
           </li>
           <li>
-            <NavLink to='/' exact>
+            <NavLink to='/' exact activeStyle={activeStyle}>
               Presets
-          </NavLink>
+            </NavLink>
           </li>
           <li>
-            <NavLink to='/custom'>
+            <NavLink to='/custom' activeStyle={activeStyle}>
               Custom
             </NavLink>
           </li>
