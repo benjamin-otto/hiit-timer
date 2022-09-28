@@ -43,7 +43,7 @@ hr {
   border-top: 1px solid;
   display: block;
   height: 1px;
-  margin: 1em 0;
+  margin: 2em 0 4em 0;
   padding: 0;
 }
 
@@ -51,6 +51,7 @@ hr {
   display: flex;
   justify-content: center;
   padding: 10px;
+  height: 100%;
 }
 
 .inner-box {
@@ -85,7 +86,7 @@ hr {
 .header {
   font-family: 'Righteous', cursive;
   font-size: 4.5rem;
-  margin-top: 5px;
+  margin: 24px 0;
   text-align: center;
 }
 
