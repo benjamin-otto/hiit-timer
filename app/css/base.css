@@ -50,6 +50,7 @@ hr {
 .container {
   display: flex;
   justify-content: center;
+  gap: 8px;
   height: 110%;
   padding: 0 16px;
 }
