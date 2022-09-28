@@ -26,13 +26,15 @@ const presets = [{
   high: 30,
   cooldown: 120,
   rounds: 10
-}, {
-  title: 'Super Short',
-  warmup: 2,
-  low: 2,
-  high: 2,
-  cooldown: 2,
-  rounds: 1
-}]
+},
+  // {
+  //   title: 'Super Short',
+  //   warmup: 2,
+  //   low: 2,
+  //   high: 2,
+  //   cooldown: 2,
+  //   rounds: 1
+  // }
+]
 
 export default presets
