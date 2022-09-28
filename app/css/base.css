@@ -50,8 +50,7 @@ hr {
 .container {
   display: flex;
   justify-content: center;
-  padding: 10px;
-  height: 100vh;
+  height: 100%;
 }
 
 .inner-box {
