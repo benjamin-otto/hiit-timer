@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "NODE_ENV='production' webpack"
+    "build": "NODE_ENV='production' webpack --ignore-platform"
   },
   "babel": {
     "presets": [
