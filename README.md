@@ -1,3 +1,3 @@
 # hiit-timer
 
-https://interval-timer.netlify.com/
+https://interval-timer.netlify.app/
